@@ -14,6 +14,6 @@ module.exports = (program) => {
     
     commandsFile.forEach(file => {
         const command = require(path.resolve(commandsDirectory, file));
-        if (typeof command.command === 'function') command(program);
+        if (typeof command == 'function') command(program);   
     });
 }

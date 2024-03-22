@@ -4,7 +4,7 @@ const { program } = require('commander');
 const package = require(path.resolve(__dirname, '../package.json'));
 const commandHandler = require(path.resolve(__dirname, './lib/commandHandler'));
 
-const cliName = package.name.replace('\/', '-').split('@')[1];
+const cliName = package.name.split('@')[1].split('/')[0];
 
 program
   .name(cliName)
